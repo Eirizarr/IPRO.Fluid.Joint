@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Flight Booking: Search Results</title>
+  <title>Flight Booking: Search for Flights</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Tajawal" rel="stylesheet" />
   <link rel="stylesheet" href="http://basehold.it/20" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Tajawal" rel="stylesheet" />
   <link rel="stylesheet" href="../screen.css" />
 </head>
 <body>
   <header id="headtitle">
-    <h1><a href="" rel="home">User Info</a></h1>
+    <h1><a href="" rel="home">Fluid Joints&nbsp;User Info</a></h1>
   </header>
   <main>
-
-    <!-- action="../seats/index.html" -->
-  <h2>Please Enter your User Info</h2>
-  <form action="../searchresults/index.html" method="get" id="flightsearch" novalidate>
-    <ol id="userinfo">
-      <li>
-        <ul class="dates">
+    <section id="searchf">
+      <h2>Please Enter you User Information</h2>
+      <form action="../362Project2/searchresults/index.html" method="get" id="flightsearch" novalidate>
+        <ol id="searchone">
           <li>
-            <label for="returndate">Birth Date</label>
-            <input type="date" id="returndate" name="return date" placeholder="mm/dd/yyyy" />
-          </li>
-        </ul>
-      </li>
-      <li>
-        <ul class="tickets">
-          <li>
-            <label for="adult">Name</label>
-            <input type="text" name="tickets" id="adult" pattern="[0-9]*" inputmode="numeric" value="1" />
-          </li>
-          <li>
-            <label for="senior">Sex</label>
-            <input type="text" name="tickets" id="senior" pattern="[0-9]*" inputmode="numeric" value="0" />
+            <ul class="trip">
+              <li>
+                <label for="oneway">Name</label>
+                <input type="text" id="deparloc" name="departing location" placeholder="Chicago, IL" />
+              </li>
+              <li>
+                <label for="roundtrip">Sex</label>
+                <input list="browsers" name="browser">
+              </li>
+              <datalist id="browsers">
+                <option value="Male">
+                <option value="Female">
+              </datalist>
+            </ul>
           </li>
           <li>
-            <label for="children">Hours you exercise per a week: </label>
-            <input type="text" name="tickets" id="children" pattern="[0-9]*" inputmode="numeric" value="0" />
+            <ul class="loc">
+              <li>
+                <label for="deparloc">Physical Activity</label>
+                <input type="text" id="deparloc" name="departing location" placeholder="Chicago, IL" />
+              </li>
+              <li>
+                <label for="arriveloc">Arriving Location</label>
+                <input type="text" id="arriveloc" name="arriving location" placeholder="Orlando, FL" />
+              </li>
+            </ul>
           </li>
           <li>
-            <label for="infant">Do you experience Pain during physical activity?</label>
-            <input type="text" name="tickets" id="infant" pattern="[0-9]*" inputmode="numeric" value="0" />
+            <ul class="dates">
+              <li>
+                <label for="birthdate">Birth Date</label>
+                <input type="date" id="departdate" name="departure date" placeholder="mm/dd/yyyy" />
+              </li>
+            </ul>
           </li>
-          <li>
-            <label for="infant">On a scale 1-10, how bad is the pain?</label>
-            <input type="text" name="tickets" id="infant" pattern="[0-9]*" inputmode="numeric" value="0" />
+          <li class="submitB">
+            <input type="submit" id="submit" name="submit" value="Submit Data" />
           </li>
-          <!-- Option for duration of pain -->
-        </ul>
-      </li>
-      <li class="submitB">
-        <input type="submit" id="submit" name="submit" value="Search for flights" />
-      </li>
-    </ol>
-  </form>
+        </ol>
+      </form>
+    </section>
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="../site.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
